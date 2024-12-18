@@ -1,19 +1,20 @@
-import React from 'react'
+import React from "react";
+import styles from "./MainSection2.module.css";
 
 function MainSection2() {
   return (
     <div>
-      <section id="services" className="services">
-      <h2>My Services</h2>
-      <div className="service-cards">
-        <div className="card">Graphic Design</div>
-        <div className="card">Web Design</div>
-        <div className="card">Software</div>
-        <div className="card">Application</div>
-      </div>
-    </section>
+      <section id="services" className={styles.services}>
+        <h2>My Services</h2>
+        <div className={styles.serviceCards}>
+          <div className={styles.card}>Graphic Design</div>
+          <div className={styles.card}>Web Design</div>
+          <div className={styles.card}>Software</div>
+          <div className={styles.card}>Application</div>
+        </div>
+      </section>
     </div>
-  )
+  );
 }
 
-export default MainSection2
+export default MainSection2;
