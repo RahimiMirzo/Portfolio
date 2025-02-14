@@ -1,80 +1,29 @@
-import React from 'react'
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import styled from 'styled-components';
-
-
+import React, { useState } from 'react';
+import styles from './Header.module.css'; // Импортируем CSS Module
 
 function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <div>
-      <Navbar bg="dark" data-bs-theme="dark">
-        <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-            
-          </Nav>
-      
-        </Container>
-        <StyledWrapper>
-      <label className="hamburger">
-        <input type="checkbox" />
-        <svg viewBox="0 0 32 32">
-          <path d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22" className="line line-top-bottom" />
-          <path d="M7 16 27 16" className="line" />
-        </svg>
-      </label>
-    </StyledWrapper>
-        </Navbar>  
-
-    </div>
-  )
+    <nav className={styles.navbar}>
+      <div className={styles.navbarLogo}>MyLogo</div>
+      <div className={`${styles.navbarLinks} ${isOpen ? styles.active : ''}`}>
+        <a href="#home" className={styles.navLink}>Home</a>
+        <a href="#about" className={styles.navLink}>About</a>
+        <a href="#services" className={styles.navLink}>Services</a>
+        <a href="#contact" className={styles.navLink}>Contact</a>
+      </div>
+      <div className={styles.navbarToggle} onClick={toggleMenu}>
+        <span className={`${styles.bar} ${isOpen ? styles.change : ''}`}></span>
+        <span className={`${styles.bar} ${isOpen ? styles.change : ''}`}></span>
+        <span className={`${styles.bar} ${isOpen ? styles.change : ''}`}></span>
+      </div>
+    </nav>
+  );
 }
 
-    
-const StyledWrapper = styled.div`
-.hamburger {
-  cursor: pointer;
-}
-
-.hamburger input {
-  display: none;
-}
-
-.hamburger svg {
-  /* The size of the SVG defines the overall size */
-  height: 3em;
-  /* Define the transition for transforming the SVG */
-  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.line {
-  fill: none;
-  stroke: red;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 3;
-  /* Define the transition for transforming the Stroke */
-  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.line-top-bottom {
-  stroke-dasharray: 12 63;
-}
-
-.hamburger input:checked + svg {
-  transform: rotate(-45deg);
-}
-
-.hamburger input:checked + svg .line-top-bottom {
-  stroke-dasharray: 20 300;
-  stroke-dashoffset: -32.42;
-}`;
-
-
-export default Header
+export default Header;

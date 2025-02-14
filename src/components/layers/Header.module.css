@@ -1,0 +1,139 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #1a1a1a, #2d2d2d);
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbarLogo {
+  color: #00ff88;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbarLogo:hover {
+  color: #fff;
+}
+
+.navbarLinks {
+  display: flex;
+  gap: 2rem;
+  transition: all 0.4s ease-in-out;
+}
+
+.navLink {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #00ff88;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.navLink:hover {
+  color: #00ff88;
+  transform: translateY(-3px);
+}
+
+.navLink:hover::after {
+  transform: scaleX(1);
+}
+
+.navbarToggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.bar {
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: 0.4s;
+  border-radius: 2px;
+}
+
+/* Анимация для иконки меню */
+.bar.change:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+  background-color: #00ff88;
+}
+
+.bar.change:nth-child(2) {
+  opacity: 0;
+}
+
+.bar.change:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+  background-color: #00ff88;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+  .navbarLinks {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 70%;
+    background: rgba(30, 30, 30, 0.98);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+    backdrop-filter: blur(10px);
+  }
+
+  .navbarLinks.active {
+    transform: translateX(0);
+  }
+
+  .navbarToggle {
+    display: flex;
+  }
+
+  .navLink {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+
+  .navLink:hover {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .navbarLogo {
+    font-size: 1.5rem;
+  }
+
+  .navbarLinks {
+    width: 100%;
+  }
+}

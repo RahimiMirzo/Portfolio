@@ -1,0 +1,100 @@
+.footer {
+    background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
+    border-top: 2px solid #3a3a3a;
+    color: #fff;
+  }
+  
+  .socialSection {
+    border-bottom: 1px solid #444;
+  }
+  
+  .socialText {
+    color: #aaa;
+    font-size: 1.1rem;
+  }
+  
+  .socialIcons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .iconLink {
+    color: #fff;
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+  }
+  
+  .iconLink:hover {
+    color: #00ff88;
+    transform: translateY(-3px);
+  }
+  
+  .textSecondary {
+    color: #aaa !important;
+  }
+  
+  .hoverUnderline {
+    position: relative;
+    text-decoration: none;
+  }
+  
+  .hoverUnderline:hover {
+    color: #00ff88 !important;
+  }
+  
+  .hoverUnderline::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #00ff88;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  .hoverUnderline:hover::after {
+    transform: scaleX(1);
+  }
+  
+  .brand {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1.5px;
+    color: #00ff88 !important;
+  }
+  
+  .pulseIcon {
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  
+  .scaleOnHover {
+    transition: transform 0.3s ease;
+  }
+  
+  .scaleOnHover:hover {
+    transform: scale(1.2);
+  }
+  
+  .copyright {
+    background: rgba(0, 0, 0, 0.25);
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .contactList li {
+    transition: transform 0.3s ease;
+  }
+  
+  .contactList li:hover {
+    transform: translateX(10px);
+  }
+  
+  .contactIcon {
+    color: #00ff88;
+  }
