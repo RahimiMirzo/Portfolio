@@ -5,7 +5,7 @@ import MainSection4 from './mainSection4/MainSection4';
 import MainSection5 from './mainSection5/MainSection5';
 import MainSection6 from './mainSection6/MainSection6';
 import MainSection7 from './mainSection7/MainSection7';
-import BackToTop from '../../../assets/features/BackToTop';
+
 
 
 
