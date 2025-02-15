@@ -3,10 +3,11 @@
 }
 
 .heroSection {
-  height: calc(100vh - var(--header-height)); /* Уменьшаем высоту на высоту хедера */
+  height: calc(110vh - var(--header-height)); /* Уменьшаем высоту на высоту хедера */
   padding-top: var(--header-height); /* Добавляем отступ сверху */
   background: url('../../../../assets/images/close-up-keyboard-used-by-software-engineer-programming-home.jpg') no-repeat center center/cover;
   position: relative;
+  top: 70px;
   overflow: hidden;
 }
 

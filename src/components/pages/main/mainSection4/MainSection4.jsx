@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./MainSection4.module.css";
 import image1 from "../../../../assets/images/close-up-keyboard-used-by-software-engineer-programming-home.jpg";
 import image2 from "../../../../assets/images/close-up-keyboard-used-by-software-engineer-programming-home.jpg";
-import image3 from "../../../../assets/images/close-up-keyboard-used-by-software-engineer-programming-home.jpg";
+import image3 from "../../../../assets/images/Screenshot 2025-02-15 112104.png";
 
 const projects = [
   {
@@ -23,8 +23,8 @@ const projects = [
   },
   {
     id: 3,
-    title: "Social Media Dashboard",
-    tech: ["Next.js", "GraphQL", "Tailwind CSS", "AWS"],
+    title: "Staff Managment",
+    tech: ["Next.js", "PGadmin17", "React", "C#"],
     image: image3,
     codeUrl: "#",
     demoUrl: "#"

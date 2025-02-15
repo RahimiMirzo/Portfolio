@@ -1,120 +1,116 @@
 .activitySection {
-    padding: 4rem 2rem;
-    background-color: #0b0e17;
-    text-align: center;
-  }
-  
-  .activitySection h2 {
-    font-size: 2rem;
-    color: #5dac5d;
-    margin-bottom: 2rem;
-  }
-  
-  .gridContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .grid {
-    display: flex;
-    gap: 3px;
-  }
-  
-  .week {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-  }
-  
-  .cell {
-    width: 12px;
-    height: 12px;
-    background-color: #1a1f2e;
-    border-radius: 2px;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  
-  .innerFill {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 0;
-    background-color: #5dac5d;
-    transition: height 0.2s ease;
-  }
-  
-  .cell[data-count="1"] .innerFill {
-    height: 25%;
-    background-color: #2c5f2d;
-  }
-  
-  .cell[data-count="2"] .innerFill {
-    height: 50%;
-    background-color: #3d7a3f;
-  }
-  
-  .cell[data-count="3"] .innerFill {
-    height: 75%;
-    background-color: #4d934d;
-  }
-  
-  .cell[data-count="4"] .innerFill {
-    height: 100%;
-    background-color: #5dac5d;
-  }
-  
-  .cell:hover {
-    transform: scale(1.2);
-    box-shadow: 0 0 5px rgba(93, 172, 93, 0.5);
-  }
-  
-  .monthsLabel {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 624px; /* 52 недели * 12px + 51 промежуток * 3px */
-    color: #b3b3b3;
-    font-size: 0.9rem;
-    padding: 0 5px;
-  }
-  
-  .legend {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    margin-top: 1.5rem;
-    color: #b3b3b3;
-    font-size: 0.9rem;
-  }
-  
-  .legendCell {
-    width: 12px;
-    height: 12px;
-    border-radius: 2px;
-  }
-  
-  .legendCell[data-level="0"] {
-    background-color: #1a1f2e;
-  }
-  
-  .legendCell[data-level="1"] {
-    background-color: #2c5f2d;
-  }
-  
-  .legendCell[data-level="2"] {
-    background-color: #3d7a3f;
-  }
-  
-  .legendCell[data-level="3"] {
-    background-color: #4d934d;
-  }
-  
-  .legendCell[data-level="4"] {
-    background-color: #5dac5d;
-  }
+  padding: 4rem 2rem;
+  background-color: #0b0e17;
+  text-align: center;
+}
+
+.activitySection h2 {
+  font-size: 2rem;
+  color: #5dac5d;
+  margin-bottom: 2rem;
+}
+
+.gridContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.grid {
+  display: flex;
+  gap: 3px;
+}
+
+.week {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.cell {
+  width: 12px;
+  height: 12px;
+  background-color: #1a1f2e;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.innerFill {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  transition: height 0.2s ease;
+}
+
+/* Оставляем правила для высоты, убираем background-color */
+.cell[data-count="1"] .innerFill {
+  height: 25%;
+}
+
+.cell[data-count="2"] .innerFill {
+  height: 50%;
+}
+
+.cell[data-count="3"] .innerFill {
+  height: 75%;
+}
+
+.cell[data-count="4"] .innerFill {
+  height: 100%;
+}
+
+.cell:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 5px rgba(93, 172, 93, 0.5);
+}
+
+.monthsLabel {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 624px;
+  color: #b3b3b3;
+  font-size: 0.9rem;
+  padding: 0 5px;
+}
+
+.legend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-top: 1.5rem;
+  color: #b3b3b3;
+  font-size: 0.9rem;
+}
+
+.legendCell {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+.legendCell[data-level="0"] {
+  background-color: #1a1f2e;
+}
+
+.legendCell[data-level="1"] {
+  background-color: #2c5f2d;
+}
+
+.legendCell[data-level="2"] {
+  background-color: #3d7a3f;
+}
+
+.legendCell[data-level="3"] {
+  background-color: #4d934d;
+}
+
+.legendCell[data-level="4"] {
+  background-color: #5dac5d;
+}

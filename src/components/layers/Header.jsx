@@ -10,7 +10,7 @@ function Header() {
 
   return (
     <nav className={styles.navbar}>
-      <div className={styles.navbarLogo}>MyLogo</div>
+      <div className={styles.navbarLogo}>R.Mirzofirdavs</div>
       <div className={`${styles.navbarLinks} ${isOpen ? styles.active : ''}`}>
         <a href="#home" className={styles.navLink}>Home</a>
         <a href="#about" className={styles.navLink}>About</a>
