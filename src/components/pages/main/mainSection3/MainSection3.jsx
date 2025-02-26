@@ -126,7 +126,7 @@ function MainSection3() {
           <Col key={index} xs={4} sm={3} md={2}>
             <motion.div 
               className={styles.techCard}
-              whileHover={{ scale: 1.1, rotate: -10 }}
+              whileHover={{ scale: 1.1, rotate: -15 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
               <Icon className={styles.techIcon} />

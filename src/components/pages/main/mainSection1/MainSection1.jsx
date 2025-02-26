@@ -7,9 +7,9 @@ function MainSection1() {
       <section id="hero" className={styles.heroSection}>
         <div className={styles.content}>
           <h1 data-aos="fade-up" className={styles.mainTitle}>
-            GET EVERY SINGLE SOLUTION
+          "Crafting Digital Experiences That Inspire"
           </h1>
-          <p className={styles.subtitle}>We are preparing something <span className={styles.highlight}>amazing</span> and exciting for you.</p>
+          <p className={styles.subtitle}>Frontend  <span className={styles.highlight}>Developer.</span> Turning Ideas into Interactive Reality.</p>
           
           <div className={styles.buttons}>
             <button className={styles.glowButton}>

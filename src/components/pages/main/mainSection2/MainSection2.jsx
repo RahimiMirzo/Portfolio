@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./MainSection2.module.css";
-import { FaReact, FaCode, FaPalette, FaTools } from "react-icons/fa";
+import { FaReact, FaCode, FaPalette, FaTools, FaChrome, FaTachometerAlt } from "react-icons/fa";
 
 function MainSection2() {
   return (
@@ -13,6 +13,7 @@ function MainSection2() {
       </div>
       
       <div className={styles.serviceCards}>
+        {/* Existing cards */}
         <div className={styles.card}>
           <div className={styles.icon}>
             <FaReact />
@@ -74,6 +75,39 @@ function MainSection2() {
             <span>Webpack</span>
             <span>ESLint</span>
             <span>Testing</span>
+          </div>
+        </div>
+
+        {/* New cards */}
+        <div className={styles.card}>
+          <div className={styles.icon}>
+            <FaChrome /> {/* Добавьте импорт FaChrome из react-icons/fa */}
+          </div>
+          <h3>Cross-Browser Compatibility</h3>
+          <p>
+            Ensuring seamless functionality across all modern browsers,
+            with progressive enhancement and graceful degradation strategies.
+          </p>
+          <div className={styles.techList}>
+            <span>BrowserStack</span>
+            <span>Polyfills</span>
+            <span>Feature Detection</span>
+          </div>
+        </div>
+        
+        <div className={styles.card}>
+          <div className={styles.icon}>
+            <FaTachometerAlt /> {/* Добавьте импорт FaTachometerAlt из react-icons/fa */}
+          </div>
+          <h3>Performance Optimization</h3>
+          <p>
+            Advanced optimization techniques including code splitting,
+            lazy loading, and bundle analysis for optimal loading speeds.
+          </p>
+          <div className={styles.techList}>
+            <span>Lighthouse</span>
+            <span>Chrome DevTools</span>
+            <span>Web Vitals</span>
           </div>
         </div>
       </div>

@@ -137,3 +137,42 @@
     width: 100%;
   }
 }
+
+/* Добавляем стили для иконок социальных сетей */
+.socialIcons {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.socialIconsMobile {
+  display: none; /* Скрываем на десктопе */
+}
+
+.socialIcon {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.socialIcon:hover {
+  color: #00ff88;
+  transform: translateY(-3px);
+}
+
+/* Адаптивные стили для мобильного меню */
+@media (max-width: 768px) {
+  .socialIcons {
+    display: none; /* Скрываем иконки на мобильных устройствах */
+  }
+
+  .socialIconsMobile {
+    display: flex; /* Показываем иконки в мобильном меню */
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .socialIcon {
+    font-size: 1.8rem;
+  }
+}

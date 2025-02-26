@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from "./MainSection5.module.css";
-import image1 from "../../../../assets/images/3c40eeb7-d2f9-4c08-931b-42795d47de7f.jpg";
+import image1 from "../../../../assets/images/freepik__comic-art-graphic-novel-art-comic-illustration-hig__20692.jpg";
 import { motion } from "framer-motion";
 
 const images = {
