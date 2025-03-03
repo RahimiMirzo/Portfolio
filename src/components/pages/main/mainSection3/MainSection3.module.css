@@ -214,3 +214,22 @@
       font-size: 2rem;
   }
 }
+
+/* В MainSection2.module.css и MainSection3.module.css */
+.services, .about {
+  position: relative;
+  z-index: 1;
+  background: transparent !important;
+}
+
+/* Добавьте затемнение фона */
+.services::before, .about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(11, 14, 23, 0.9);
+  z-index: -1;
+}

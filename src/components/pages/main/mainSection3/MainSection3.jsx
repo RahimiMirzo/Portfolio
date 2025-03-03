@@ -18,9 +18,16 @@ import {
   SiPostgresql,
 } from "react-icons/si";
 import styles from "./MainSection3.module.css";
+import { Parallax } from 'react-parallax';
 
 function MainSection3() {
   return (
+    <Parallax 
+    bgImage="../../../../assets/images/2.jpg" 
+    strength={200}
+    bgImageStyle={{ opacity: 0.7 }}
+  >
+    
     <section id="about" className={styles.about}>
       <motion.h2 
         initial={{ opacity: 0, y: -20 }}
@@ -135,6 +142,9 @@ function MainSection3() {
         ))}
       </Row>
     </section>
+
+    
+    </Parallax>
   );
 }
 
