@@ -1,13 +1,14 @@
 import React from "react";
 import styles from "./MainSection6.module.css";
 
-// Функция для генерации случайного оттенка зеленого
+// Улучшенная функция генерации оттенков зеленого
 const getRandomGreen = () => {
-  const g = Math.floor(Math.random() * 156) + 100; // Зеленый канал: 100-255
-  return `#00${g.toString(16).padStart(2, '0')}00`;
+  const r = Math.floor(Math.random() * 50);
+  const g = Math.floor(Math.random() * 155) + 100;
+  const b = Math.floor(Math.random() * 50);
+  return `#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`;
 };
 
-// Пример данных активности
 const activityData = [
   { date: "2023-10-01", count: 2 },
   { date: "2023-10-02", count: 5 },
@@ -18,7 +19,6 @@ const activityData = [
   { date: "2023-10-07", count: 4 },
 ];
 
-// Функция для генерации сетки активности
 const generateActivityGrid = () => {
   const grid = [];
   for (let i = 0; i < 52; i++) {
@@ -28,7 +28,7 @@ const generateActivityGrid = () => {
       date.setDate(date.getDate() - (52 - i) * 7 + j);
       const dateStr = date.toISOString().split("T")[0];
       const activity = activityData.find(a => a.date === dateStr);
-      const randomColor = getRandomGreen(); // Генерация случайного цвета
+      const randomColor = getRandomGreen();
       week.push(
         <div
           key={`${i}-${j}`}
@@ -39,7 +39,7 @@ const generateActivityGrid = () => {
           <div
             className={styles.innerFill}
             data-count={activity ? activity.count : 0}
-            style={{ backgroundColor: randomColor }} // Применение случайного цвета
+            style={{ backgroundColor: randomColor }}
           />
         </div>
       );
@@ -56,8 +56,9 @@ function MainSection6() {
       <div className={styles.gridContainer}>
         <div className={styles.grid}>{generateActivityGrid()}</div>
         <div className={styles.monthsLabel}>
-          {["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"].map((month, i) => (
-            <span key={i}>{month}</span>
+          {["Jan", "Feb", "Mar", "Apr", "May", "Jun", 
+            "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"].map((month, i) => (
+            <span key={i} className={styles.monthItem}>{month}</span>
           ))}
         </div>
       </div>
